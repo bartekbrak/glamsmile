@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block tpl_id %}sub{% endblock tpl_id %}
+
+{% block main %}
+<div class="slides">
+    <div id="slider">
+        <div id="slider-movable">
+            <div class="slide" id="slide-1">
+                <div class="content">
+                    <p>Pwyll Pendeuic Dyuet a oed yn arglwyd ar seith cantref Dyuet. A threigylgweith yd oed yn Arberth, prif lys idaw, a dyuot yn y uryt ac yn y uedwl uynet y hela. Sef kyueir o'y gyuoeth a uynnei y hela, Glynn Cuch. Ac ef a gychwynnwys y nos honno o Arberth, ac a doeth hyt ym Penn Llwyn Diarwya, ac yno y bu y nos honno. A thrannoeth yn ieuengtit y dyd kyuodi a oruc, a dyuot y Lynn Cuch i ellwng e gwn dan y coet. A chanu y gorn a dechreu dygyuor yr hela, a cherdet yn ol y cwn, ac ymgolli a'y gydymdeithon. Ac ual y byd yn ymwarandaw a llef yr erchwys, ef a glywei llef erchwys arall, ac nit oedynt unllef, a hynny yn dyuot yn erbyn y erchwys ef. Ac ef a welei lannerch yn y coet o uaes guastat; ac ual yd oed y erchwys ef yn ymgael ac ystlys y llannerch, ef a welei carw o ulaen yr erchwys arall. A pharth a pherued y llannerch, llyma yr erchwys a oed yn y ol yn ymordiwes ac ef, ac yn y uwrw y'r llawr</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="slide" id="slide-2">
+                <div class="content">
+                    <img src="{{ STATIC_URL }}img/a1.png" />
+                </div>
+            </div>
+            <div class="slide" id="slide-3">
+                <div class="content">
+                    <p>Pwyll Pendeuic Dyuet a oed yn arglwyd ar seith cantref Dyuet. A threigylgweith yd oed yn Arberth, prif lys idaw, a dyuot yn y uryt ac yn y uedwl uynet y hela. Sef kyueir o'y gyuoeth a uynnei y hela, Glynn Cuch. Ac ef a gychwynnwys y nos honno o Arberth, ac a doeth hyt ym Penn Llwyn Diarwya, ac yno y bu y nos honno. A thrannoeth yn ieuengtit y dyd kyuodi a oruc, a dyuot y Lynn Cuch i ellwng e gwn dan y coet. A chanu y gorn a dechreu dygyuor yr hela, a cherdet yn ol y cwn, ac ymgolli a'y gydymdeithon. Ac ual y byd yn ymwarandaw a llef yr erchwys, ef a glywei llef erchwys arall, ac nit oedynt unllef, a hynny yn dyuot yn erbyn y erchwys ef. Ac ef a welei lannerch yn y coet o uaes guastat; ac ual yd oed y erchwys ef yn ymgael ac ystlys y llannerch, ef a welei carw o ulaen yr erchwys arall. A pharth a pherued y llannerch, llyma yr erchwys a oed yn y ol yn ymordiwes ac ef, ac yn y uwrw y'r llawr</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <div class="slide" id="slide-4">
+                <div class="content">
+                    <img src="{{ STATIC_URL }}img/a1.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block twocol %}
+<ul id="main-menu">
+          <li><a data-idx="1" class="e1 current" href="#">Licówki</a></li>
+          <li><a data-idx="2" class="e2" href="#">Ekspert</a></li>
+          <li><a data-idx="3" class="e3" href="#">Laboratoria Glamsmile</a></li>
+          <li><a data-idx="4" class="e4" href="#">Kontakt</a></li>
+        </ul>
+{% endblock %}

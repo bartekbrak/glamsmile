@@ -1,0 +1,255 @@
+body {
+  background-color: #0c0c0c;
+  font-family: Tahoma, sans-serif;
+  color: #7f7f7f;
+}
+body.sub {
+  background: url("../img/bodyback.png") repeat-x top #0c0c0c;
+}
+a {
+  color: #7f7f7f;
+  text-decoration: none;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+a:hover {
+  color: #efefef;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  width: 1000px;
+  height: 921px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  position: relative;
+  -moz-box-sizing: border-box;
+}
+.sub .main {
+  height: 850px;
+}
+.index .back1 {
+  background: url("../img/1.png");
+  width: 1000px;
+  height: 188px;
+}
+.index .back2 {
+  background: url("../img/2.png");
+  width: 1000px;
+  height: 290px;
+}
+.index .back3 {
+  background: url("../img/3.png");
+  width: 1000px;
+  height: 243px;
+}
+.sub .back1 {
+  background: url("../img/1.png");
+  width: 1000px;
+  height: 188px;
+}
+.sub .back2 {
+  background: url("../img/back2bar.png") repeat-x top #eeefee;
+  width: 1000px;
+  height: 426px;
+}
+.sub .back3 {
+  background: url("../img/3.png");
+  width: 1000px;
+  height: 243px;
+}
+.large_frame_placeholder {
+  position: absolute;
+  left: 586px;
+  top: 270px;
+  width: 360px;
+  height: 130px;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+}
+.large_frame_placeholder h1 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.sub .three_smaller_frames {
+  top: 642px;
+}
+.three_smaller_frames {
+  position: absolute;
+  left: 50px;
+  top: 506px;
+  width: 898px;
+  height: 156px;
+  -moz-box-sizing: border-box;
+}
+.three_smaller_frames a {
+  display: block;
+  float: left;
+  width: 33.3%;
+  height: 156px;
+  -moz-box-sizing: border-box;
+  position: relative;
+}
+.three_smaller_frames a .li_header {
+  margin: 15px 10px 10px 25px;
+  color: #454545;
+  font-weight: bold;
+  display: block;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.three_smaller_frames a .li_header img {
+  padding-right: 5px;
+}
+.three_smaller_frames a:hover .li_header {
+  color: #e72a75;
+  text-shadow: 0px 0px 1px rgba(231,42,117,0.6);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.three_smaller_frames * {
+  margin: 0px;
+  padding: 0px;
+}
+.three_smaller_frames .last_small_frame {
+  position: absolute;
+  left: 625px;
+  top: 45px;
+  width: 140px;
+  height: 100px;
+  -moz-box-sizing: border-box;
+}
+.slides {
+  position: absolute;
+  left: 50px;
+  top: 188px;
+  width: 898px;
+  height: 426px;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+}
+.twocol {
+  font-size: 10px;
+  left: 50px;
+  top: 690px;
+  width: 898px;
+  height: 200px;
+  position: absolute;
+  -moz-box-sizing: border-box;
+}
+.twocol h1 {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 10px 15px 0;
+  margin: 0px;
+}
+.twocol p {
+  font-weight: normal;
+  padding: 0 30px 10px 0;
+  margin: 0px;
+}
+.twocol .col {
+  display: block;
+  position: absolute;
+  float: left;
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+  -moz-box-sizing: border-box;
+}
+.twocol .col2 {
+  left: 50%;
+}
+.twocol .col2 p {
+  padding-right: 0;
+}
+hr {
+  height: 11px;
+  background: url("../img/bar.png") repeat-x top center;
+  border: none !important;
+  margin: 0 auto;
+  width: 898px;
+}
+.keywords {
+  width: 898px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.keywords a {
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 12px;
+}
+.keywords a:first-child {
+  margin: 0;
+}
+.languages {
+  width: 898px;
+  margin: 0 auto;
+}
+.languages #flag {
+  margin-right: 5px;
+}
+#slider-movable {
+  height: 426px;
+  position: absolute;
+}
+.slide {
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  height: 426px;
+  position: absolute;
+  top: 0;
+}
+#main-menu {
+  position: absolute;
+  top: 140px;
+  left: 500px;
+  -moz-box-sizing: border-box;
+}
+#main-menu li {
+  display: inline-block;
+  margin: 0 15px;
+  font-weight: bold;
+}
+#main-menu li a {
+  color: #bfbcbc;
+  text-shadow: 0 0 1px #fff;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#main-menu li a:hover {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: #000;
+  text-shadow: 0 0 1px #000;
+}
+

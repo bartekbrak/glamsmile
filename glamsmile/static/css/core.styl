@@ -1,0 +1,229 @@
+main_col_width = 1000px
+main_col_width_without_margin = 898px
+
+dev(box-sizing=border-box)
+    -moz-box-sizing box-sizing
+    // border 1px dashed rgba(128,128,128,0.3)
+
+easer(t)
+    -webkit-transition all t ease
+    -moz-transition all t ease
+    -o-transition all t ease
+    -ms-transition all t ease
+    transition all t ease
+
+ie7_inline_block_fix()
+    zoom 1
+    *display inline
+
+
+body
+    background-color #0c0c0c
+    &.sub
+        background url('../img/bodyback.png') repeat-x top #0c0c0c
+    font-family Tahoma, sans-serif
+    color #7f7f7f
+
+a
+    color #7f7f7f
+    text-decoration none
+    easer(1s)
+    &:hover
+        color #efefef
+        easer(0.4s)
+*
+    margin 0px
+    padding 0px
+    font-size 12px
+
+ul, ol
+    margin 0
+    padding 0
+
+
+.main
+    width main_col_width
+    height 921px
+    margin 0 auto
+    background-repeat no-repeat
+    position relative
+    dev()
+.sub
+    .main
+        height 850px
+.index
+    .back1
+        background url('../img/1.png')
+        width main_col_width
+        height 188px
+    .back2
+        background url('../img/2.png')
+        width main_col_width
+        height 290px
+    .back3
+        background url('../img/3.png')
+        width main_col_width
+        height 243px
+.sub
+    .back1
+        background url('../img/1.png')
+        width main_col_width
+        height 188px
+    .back2
+        background url('../img/back2bar.png') repeat-x top #eeefee
+        width main_col_width
+        height 426px
+    .back3
+        background url('../img/3.png')
+        width main_col_width
+        height 243px
+
+.large_frame_placeholder
+    position absolute
+    left 586px
+    top 270px
+    width 360px
+    height 130px
+    dev()
+    overflow hidden
+    h1
+        font-size 14px
+        font-weight normal
+    p
+
+
+.sub
+    .three_smaller_frames
+        top 506 + 136px
+.three_smaller_frames
+    position absolute
+    left 50px
+    top 506px
+    width 898px
+    height 156px
+    dev()
+    a
+        display block
+        float left
+        width 33.3%
+        height 156px
+        dev()
+        position relative
+        .li_header
+            margin 15px 10px 10px 25px
+            color #454545
+            font-weight bold
+            display block
+            easer(1s)
+            img
+                padding-right 5px
+        &:hover
+            .li_header
+                color #E72A75
+                text-shadow 0px 0px 1px rgba(231,42,117, 0.6)
+                easer(0.4s)
+
+    *
+        margin 0px
+        padding 0px
+    .last_small_frame
+        position absolute
+        left 625px
+        top 45px
+        width 140px
+        height 100px
+        dev()
+
+.slides
+    position absolute
+    left 50pxpx
+    top 188px
+    width main_col_width_without_margin
+    height 426px
+    dev()
+    overflow hidden
+
+.twocol
+    font-size 10px
+    left 50px
+    top 690px
+    width 898px
+    height 200px
+    position absolute
+    dev()
+    h1
+        font-size 15px
+        font-weight bold
+        padding 0 10px 15px 0
+        margin 0px
+    p
+        font-weight normal
+        padding 0 30px 10px 0
+        margin 0px
+
+    .col
+        display block
+        position absolute
+        float left
+        width 50%
+        height 200px
+        overflow hidden
+        dev()
+
+    .col2
+        left 50%
+        p
+            padding-right 0
+
+hr
+    height 11px
+    background url('../img/bar.png') repeat-x top center
+    border none !important
+    margin 0 auto
+    width 898px
+.keywords
+    width main_col_width_without_margin
+    margin 0 auto
+    a
+        display inline-block
+        margin 0 20px
+        font-size 12px
+        &:first-child
+            margin 0
+    margin-bottom 5px
+
+.languages
+    width main_col_width_without_margin
+    margin 0 auto
+    #flag
+        margin-right 5px
+#slider-movable
+    height 426px
+    position absolute
+    // left 0px
+    // top 0px
+.slide
+  background-position right bottom
+  background-repeat no-repeat
+  height 426px
+  position absolute
+  top 0
+
+#main-menu
+    position absolute
+    top 140px
+    left 500px
+    dev()
+    li
+        display inline-block
+        margin 0 15px
+        font-weight bold
+        a
+            color #bfbcbc
+            text-shadow 0 0 1px white
+            easer(1s)
+            &:hover
+                easer(0.4s)
+                color black
+                text-shadow 0 0 1px black
+
