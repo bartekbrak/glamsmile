@@ -1,6 +1,6 @@
 // code by Janek@Hint, modified by tu-br
 
-var currentSlide = 0;
+var currentSlide = document.URL.split("#")[1] || 1;
 
 $.easing.jease = function (x, t, b, c, d) {
     return c * ( -Math.pow( 2, -10 * t/d ) + 1 ) + b;
@@ -8,8 +8,8 @@ $.easing.jease = function (x, t, b, c, d) {
 
 function goTo(pageId) {
   var offset = $('#slide-'+pageId).data('offset');
-  $('#main-menu a').removeClass('current');
-  $('#main-menu a').css({borderTopWidth:0,opacity:1});
+  $('a.slideme').removeClass('current');
+  $('a').css({borderTopWidth:0,opacity:1});
 
   var innerOffset=$('#slide-'+pageId).width();
   if(pageId<currentSlide) {
@@ -19,8 +19,8 @@ function goTo(pageId) {
   $('#slide-'+pageId+' .content').animate({left: 0}, 700, 'jease');
   $('#slider-movable').animate({left:-offset+'px'}, 300, 'jease', function() {
     $(this).css('left',-offset+'px');
-    $('#main-menu a.e'+pageId).addClass('current');
-    $('#main-menu a.e'+pageId).css('borderTopWidth','7px');
+    $('.e'+pageId).addClass('current');
+    $('.e'+pageId).css('borderTopWidth','7px');
     currentSlide=pageId;
   });
 }
@@ -35,16 +35,16 @@ function prepareSlides(width,init) {
   $('#slider').width(width);
   var offset=0;
   $('.slide').each(function() {
-    $(this).width(width);
+    // $(this).width(width);
     $(this).css('left',offset+'px');
     $(this).data('offset',offset);
-    $(this).find('.content').width(width-320);
+    // $(this).find('.content').width(width-320);
     offset+=width;
   });
   $('#slider-movable').width(offset);
   if(init) {
     $('#slider-movable').css('left','-'+offset+'px');
-    goTo(1);
+    goTo(currentSlide);
   }
 }
 
@@ -59,8 +59,10 @@ function sendEmailInquiry() {
       });
 }
 
+
+
 $(document).ready(function() {
-  $('#slider').css({left:488+'px'});
+  // $('#slider').css({left:488+'px'});
   var sliderW=$(window).width()-$('#slider').position().left;
   prepareSlides(sliderW,true);
   if(!Modernizr.input.placeholder) {
@@ -106,17 +108,12 @@ $(document).ready(function() {
     goTo(currentSlide);
   });
 
-  $('#main-menu a').on('mouseenter',function() {
-    if(!$(this).hasClass('current')) {
-      $(this).animate({opacity: 0.5, borderTopWidth: '7px'},100);
-    }
-  }).on('mouseleave',function() {
-    if(!$(this).hasClass('current')) {
-      $(this).animate({opacity: 1, borderTopWidth: 0},100);
-    }
-  }).on('click', function(e) {
+  $('.slideme').on('click', function(e) {
     e.preventDefault();
     goTo($(this).data('idx'));
   });
+
+// switch to hash denoted slide no when called externally, this is messy
+// goTo();
 
 });

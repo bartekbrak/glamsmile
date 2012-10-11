@@ -1,24 +1,22 @@
 import os
-PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
+PROJECT_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
 TIME_ZONE = 'Europe/Warsaw'
 LANGUAGE_CODE = 'pl'
 SITE_ID = 1
 USE_I18N = False
 USE_L10N = False
 
-MEDIA_ROOT = ''
-MEDIA_URL = ''
-
+# important in local dev as instructed in urls.py, should match deployment server's configuration (eg nginx's)
+MEDIA_ROOT = os.path.abspath(os.path.join(PROJECT_PATH, 'site_media'))
+# this is automatically inserted in website's body to create links
+MEDIA_URL = '/site_media/'
+# static files will be collected there in deployment, should match deployment server's configuration (eg nginx's)
 STATIC_ROOT = os.path.abspath(os.path.join(PROJECT_PATH, 'static'))
+# important in local dev, should probably stay same for deployment too
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-)
-
 STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -26,10 +24,11 @@ SECRET_KEY = '6wx=x85yz45u_ujg9^j@t7#)2_lgahy)!*w&amp;$cl@e^6d_%^7yk'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
+# TEMPLATE_DIRS = (
+    # '/'.join((PROJECT_PATH, 'templates')),
+# )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -61,10 +60,6 @@ ROOT_URLCONF = 'glamsmile.urls'
 
 WSGI_APPLICATION = 'glamsmile.wsgi.application'
 
-TEMPLATE_DIRS = (
-    '/'.join((PROJECT_PATH, 'templates')),
-)
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,27 +68,21 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    #django-cms
+    #django-cms essentials
     'cms',
     'mptt',
     'menus',
     'south',
     'sekizai',
     # django-cms plugins
-    # 'cms.plugins.file',
+    'glamsmile',   # this has to precede plugins as it overrides their default templates
+    #cms plugins
     'cms.plugins.link',
     'cms.plugins.picture',
-    # 'cms.plugins.teaser',
     'cms.plugins.text',
-    # 'cms.plugins.video',
-    # 'cms.plugins.googlemap',
-    # 'cms.plugins.flash',
     # misc
     'debug_toolbar',
     'stylus',
-    # main
-    'glamsmile',
-    'mylink_cmsplugin'
 )
 
 

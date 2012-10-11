@@ -3,3 +3,5 @@
 settings_local.py
 tmp/
 static/
+site_media/
+_env
