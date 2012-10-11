@@ -29,6 +29,8 @@ body
 a
     color red
     text-decoration none
+a, a:active, a:hover, a:link, a:visited
+    outline none
 
 *
     margin 0px
@@ -292,4 +294,17 @@ hr
                 easer(0.4s)
                 color pink
 
-
+#form_block
+    position absolute
+    left 400px
+    width 50%
+    top 0
+    h1
+        padding-left 0
+    form
+        .text
+            margin 5px
+            padding 5px
+            border 1px solid rgba(128,128,128,0.5)
+    textarea
+        width 380px

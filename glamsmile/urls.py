@@ -6,6 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^send-email-inquiry/$', 'glamsmile.views.send_email_inquiry'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('cms.urls')),
 )

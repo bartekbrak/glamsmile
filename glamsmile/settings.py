@@ -88,3 +88,9 @@ INSTALLED_APPS = (
 
 from settings_local import *
 from cms_settings import *
+
+EMAIL_HOST = 'mail.hint.pl'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'noreply@hint.pl'
+EMAIL_HOST_PASSWORD = 'noreply'
+SERVER_EMAIL = 'noreply@hint.pl'
